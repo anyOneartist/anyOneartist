@@ -1,0 +1,227 @@
+@charset "UTF-8";
+html {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/* ===========uper=========== */
+
+.uper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    background-color: #444444;
+    /* opacity: .6; */
+    color: white;
+}
+
+/* ===========left=========== */
+
+.left {
+    width: 70%;
+    background-color: #444444;
+}
+
+.leftContents {
+    padding: 35px 0 0 15px;
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.userName {
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0 0 0;
+    /* font-weight: bold; */
+}
+
+.userID {
+    font-size: 12px;
+}
+
+/* ===========left=========== */
+
+/* ===========right=========== */
+
+.right {
+    width: 30%;
+    /* background-color: blue; */
+}
+
+.right ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0 0 0;
+    width: 80%;
+    margin: 0 0 0 25px;
+}
+
+.right ul li {
+    width: 30px;
+    height: 30px;
+    background-color: #666666;
+    text-align: right;
+    position: relative;
+}
+
+.detail {
+    /* 外側の空白 */
+    margin: 0 15px 0 0;
+}
+
+.findFriends img,
+.detail img {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+/* ===========right=========== */
+
+/* ===========uper=========== */
+
+/* ===========middle=========== */
+
+.middleWrapper {
+    height: 60px;
+    background-color: #444444;
+}
+
+.middle {
+    margin: 0 15px 0;
+    border-top: #aaaaaa solid 0.2px;
+}
+
+.status {
+    font-size: 10px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 0 15px;
+    color: #cccccc;
+}
+
+.infoWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info {
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin: 1% 0 0 15px;
+    font-size: 12px;
+}
+
+/* ===========middle=========== */
+
+/* ===========downer=========== */
+
+.downer {
+    height: 466px;
+    background-color: #000000;
+}
+
+.options {
+    background-color: #222222;
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+}
+
+.options div a {
+    color: #f2f2f2;
+}
+
+.sec1 {
+    width: 49%;
+    text-align: center;
+}
+
+.sec2 {
+    width: 2%;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.sec3 {
+    width: 49%;
+    text-align: center;
+}
+
+.sec1Box,
+.sec3Box {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+}
+
+.selected {
+    color: white;
+    border-bottom: yellow 2px solid;
+}
+
+.movies {
+    color: white;
+}
+
+.frames {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.frames li {
+    overflow: scroll;
+    width: 33.333%;
+    color: white;
+    height: 218px;
+}
+
+/* ===========downer=========== */
+
+/* ===========footer=========== */
+
+footer {
+    position: fixed;
+    /*基準を画面の左上に*/
+    bottom: 0;
+    left: 0;
+    /*余白が入らないように*/
+    margin: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 999;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    height: 35px;
+}
+
+footer ul li {
+    /* line-height: 35px; */
+}
+
+footer ul li a {
+    align-items: center;
+    height: 35px;
+}
+
+.underBar {
+    border-bottom: solid 2px #efefef;
+    margin-bottom: 10px;
+    width: 22px;
+    text-align: center;
+}
