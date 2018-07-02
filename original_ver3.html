@@ -27,40 +27,6 @@
     <canvas id="canvas" width="400" height="300"></canvas>        <!-- 重ねて描画する canvas -->
   </div>
   <div id="dat"></div>  <!-- データ表示用 div 要素 -->
-<!-- <form name="form1" action="">眉毛UP
-  <div id="Select1">
-      <input type="radio" name="" id="" value="tan1.mp3" checked="">
-      <label for="select1">タンバリン１</label>
-      <input type="radio" name="" id="" value="tan2.mp3">
-      <label for="select2">タンバリン２</label>
-      <input type="radio" name="" id="" value="tan3_ver2.mov">
-      <label for="select3">タンバリン３</label>
-  </div>
-</form>
-
-
-<form name="form2" action="">口開ける
-  <div id="Select2">
-      <input type="radio" name="" id="" value="tan1.mp3" checked="">
-      <label for="select1">タンバリン１</label>
-      <input type="radio" name="" id="" value="tan2.mp3">
-      <label for="select2">タンバリン２</label>
-      <input type="radio" name="" id="" value="tan3_ver2.mov">
-      <label for="select3">タンバリン３</label>
-  </div>
-</form>
-
-<form name="form3" action="">未定
-  <div id="Select3">
-      <input type="radio" name="" id="" value="tan1.mp3" checked="">
-      <label for="select1">タンバリン１</label>
-      <input type="radio" name="" id="" value="tan2.mp3">
-      <label for="select2">タンバリン２</label>
-      <input type="radio" name="" id="" value="tan3_ver2.mov">
-      <label for="select3">タンバリン３</label>
-  </div>
-</form>
-   -->
   
  <form name="form1" action="">眉上げる
     <select id="Select1">
@@ -102,19 +68,6 @@
           <option value="kya.mp3">キャー</option>
         </select>
   </form>
-  <!-- <form name="form3" action="">口開ける
-    <select id="Select3">
-      <option>---</option>
-      <option value="tan1.mp3">タンバリン1</option>
-      <option value="tan2.mp3">タンバリン2</option>
-      <option value="tan3_ver2.mov">タンバリン3</option>
-      <option value="dolamu.mp3">ドラム</option>
-      <option value="dolamu_hat.mp3">ドラム・ハット</option>
-      <option value="dolamu_sunea.mp3">ドラム・スネア</option>
-      <option value="wahaha.mp3">わっはっは</option>
-      <option value="kya.mp3">キャー</option>
-    </select> 
-</form> -->
   眉テンポ<input id="slider2" type="range" min="1" max="800" value="0" oninput="document.getElementById('slider').value=this.value">
   <output id="slider">1</output>
   目テンポ<input id="slider6" type="range" min="1" max="800" value="0" oninput="document.getElementById('slider5').value=this.value">
@@ -231,7 +184,7 @@ $("#slider6").on('change',function(){
     // console.log(width_base)
 
 
-    if((positions[34][1] - positions[22][1]) > ago_height*1.43 && (positions[57][1] - positions[60][1]) < ago_height*0.1){
+    if((positions[34][1] - positions[22][1]) > ago_height*1. && (positions[57][1] - positions[60][1]) < ago_height*0.1){
       drawStamp(positions, stampSurp, 14, 1.0, 0.7, 0.0);
       if(flag_piano_do == 0){
         playsound(select1);
@@ -242,18 +195,8 @@ $("#slider6").on('change',function(){
         setTimeout(flag0,slider)
       }
     }
-    // if(flag_piano_re == 0){
-    //   if((positions[18][0] - positions[22][0]) < width_base*0.509){
-    //     playsound("piano_re");
-    //     flag_piano_re = 1
-    //     flag0 = function(){
-    //       flag_piano_re = 0
-    //     }
-    //     setTimeout(flag0,700)
-    //   }
-    // }
     
-    //   if((positions[26][1] - positions[24][1]) < height_base/3.95 && (positions[31][1] - positions[29][1]) > height_base/3.95){
+
     if((positions[57][1] - positions[60][1]) > ago_height*0.30){
       drawStamp(positions, stampBears, 7, 3.0, 0.0, 0.0);
       if(flag_piano_mi == 0){
@@ -281,54 +224,7 @@ $("#slider6").on('change',function(){
         setTimeout(flag0,slider3)
       }
     }
-    // if(flag_piano_fa == 0){
-    // //   if((positions[31][1] - positions[29][1]) < height_base/3.95 && (positions[26][1] - positions[24][1]) > height_base/3.95){
-    //     if((positions[33][1] - positions[22][1]) > height_base*0.42){
-    //     playsound("piano_fa");
-    //     flag_piano_fa = 1
-    //     flag0 = function(){
-    //       flag_piano_fa = 0
-    //     }
-    //     setTimeout(flag0,700)
-    //   }
-    // }
-    
-    // if(flag_dolamu == 0){
-    //   if(emotion[3].value > 0.4) {                          // ★感情 sad の値が一定値より大きければ
-    //     drawStamp(positions, stampTear, 23, 0.4, 0.0, 0.8); // ★涙のスタンプを描画（右目尻）
-    //     drawStamp(positions, stampTear, 28, 0.4, 0.0, 0.8); // ★涙のスタンプを描画（左目尻）
-    //     playsound("dolamu");
-    //     flag_dolamu = 1
-    //     flag0 = function(){
-    //       flag_dolamu = 0
-    //     }
-    //     setTimeout(flag0,300)
-    //   }
-    // }
-    // if(flag_dolamu_hat == 0){
-    //   if(emotion[4].value > 0.8) {                          // ★感情 surprised の値が一定値より大きければ
-    //     drawStamp(positions, stampSurp, 14, 1.0, 0.7, 0.0); // ★驚きのスタンプを描画（顔の左）
-    //     playsound("dolamu_hat");
-    //       flag_dolamu_hat = 1
-    //       flag0 = function(){
-    //         flag_dolamu_hat = 0
-    //       }
-    //       setTimeout(flag0,300)
-    //   }
-    // }
-    // if(flag_dolamu_sunea == 0){
-    //   if(emotion[5].value > 0.4) {                          // ★感情 happy の値が一定値より大きければ
-    //     drawStamp(positions, stampEyes, 27, 0.6, 0.0, 0.0); // ★ハートのスタンプを描画（右目）
-    //     drawStamp(positions, stampEyes, 32, 0.6, 0.0, 0.0); // ★ハートのスタンプを描画（左目）
-    //     playsound("dolamu_sunea");
-    //     flag_dolamu_sunea = 1
-    //       flag0 = function(){
-    //         flag_dolamu_sunea = 0
-    //       }
-    //       setTimeout(flag0,300)
-    //   }
-    // }
-      
+
   }
   setTimeout("drawLoop()", 2000);
    
@@ -344,72 +240,7 @@ $("#slider6").on('change',function(){
     var imgT = pos[bNo][1] - imgH / 2 + nose * vShift;    // 画像のTopを決める
     context.drawImage(img, imgL, imgT, imgW, imgH);       // 画像を描く
   }
-//   function selectboxChange1() {
-//       selectindex = document.form1.Select1.selectedIndex;
-//       switch (selectindex) {
-//         case 1:
-//           document.getElementById( 'sound-file1' ).play() ;
-//           break;
-//         case 2:
-//           document.getElementById( 'sound-file2' ).play() ;
-//           break;
-//         case 3:
-//           document.getElementById( 'sound-file3' ).play() ;
-//           break;
-//       }
-//     }
-// window.AudioContext = window.AudioContext || window.webkitAudioContext;  
-// var context = new AudioContext();
 
-// // Audio 用の buffer を読み込む
-// var getAudioBuffer = function(url, fn) {  
-//   var req = new XMLHttpRequest();
-//   // array buffer を指定
-//   req.responseType = 'arraybuffer';
-
-//   req.onreadystatechange = function() {
-//     if (req.readyState === 4) {
-//       if (req.status === 0 || req.status === 200) {
-//         // array buffer を audio buffer に変換
-//         context.decodeAudioData(req.response, function(buffer) {
-//           // コールバックを実行
-//           fn(buffer);
-//         });
-//       }
-//     }
-//   };
-
-//   req.open('GET', url, true);
-//   req.send('');
-// };
-
-// // サウンドを再生
-// var playSound = function(buffer) {  
-//   // source を作成
-//   var source = context.createBufferSource();
-//   // buffer をセット
-//   source.buffer = buffer;
-//   // context に connect
-//   source.connect(context.destination);
-//   // 再生
-//   source.start(0);
-// };
-
-// // main
-// window.onload = function() {  
-//   // サウンドを読み込む
-//   getAudioBuffer('dolamu.mp3', function(buffer) {
-//     // 読み込み完了後にボタンにクリックイベントを登録
-//     var btn = document.getElementById('btn');
-//     btn.onclick = function() {
-//       // サウンドを再生
-//       playSound(buffer);
-//     };
-//   });
-// };
-// // $("#btn").on('click',function(){
-// //   setTimeout("drawLoop()", 2000);
-// // })
 
 
   </script>
