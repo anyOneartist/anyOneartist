@@ -71,6 +71,11 @@ if($status==false) {
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+
+        // アンダーバーの移動
+        $("ul>span").removeClass("underBar");
+        $("ul>span:nth-child(1)").addClass("underBar");
+
         // ウィンドウ高さを計算して動画のサイズを指定
         $(function(){
             var movieWidth = $(window).width();
@@ -137,6 +142,12 @@ if($status==false) {
             $(this).removeClass("glyphicon glyphicon-plus");
             $('.hidden').removeClass("hidden").addClass('blinking');
         });
+
+        //準備中表示
+        $(".sec3Box, .glyphicon-th-list,.glyphicon-cog").on("click",function(){
+                    alert("coming soon");
+                    return false;
+        }) ;
 
 
     </script>
