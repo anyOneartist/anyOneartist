@@ -167,11 +167,11 @@ $("#slider2").on('change',function(){
 //       console.log(slider)
 });
 $("#slider4").on('change',function(){
-      slider2 = $("#slider4").val()
+      slider2 = $("#slider3").val()
 //       console.log(slider)
 });
 $("#slider6").on('change',function(){
-      slider3 = $("#slider6").val()
+      slider3 = $("#slider5").val()
 //       console.log(slider)
 });
 
@@ -238,7 +238,7 @@ $("#slider6").on('change',function(){
         flag0 = function(){
           flag_piano_do = 0
         }
-        setTimeout(flag0,slider+100)
+        setTimeout(flag0,slider)
       }
     }
     // if(flag_piano_re == 0){
@@ -263,7 +263,7 @@ $("#slider6").on('change',function(){
         flag0 = function(){
           flag_piano_mi = 0
         }
-        setTimeout(flag0,slider2+100)
+        setTimeout(flag0,slider2)
       }
     }
     if((positions[36][1] - positions[24][1]) < ago_height*1.35){
@@ -277,7 +277,7 @@ $("#slider6").on('change',function(){
         flag0 = function(){
           flag_piano_fa = 0
         }
-        setTimeout(flag0,slider3+100)
+        setTimeout(flag0,slider3)
       }
     }
     // if(flag_piano_fa == 0){
