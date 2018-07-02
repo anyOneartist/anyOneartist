@@ -111,3 +111,12 @@ footer >ul {
 .underBar {
     border-bottom: 2px solid #ffffff;
 }
+
+a {
+    text-decoration:none;
+}
+
+.glyphicon {
+    color:white;
+}
+

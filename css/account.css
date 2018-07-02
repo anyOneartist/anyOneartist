@@ -88,7 +88,7 @@ html {
 /* ===========middle=========== */
 
 .middleWrapper {
-    height: 60px;
+    height: 90px;
     background-color: #444444;
 }
 
@@ -138,6 +138,13 @@ html {
     font-size: 13px;
 }
 
+.options.sticky {
+    position:fixed;
+    top:0;
+    z-index:1;
+    width: 100%;
+}
+
 .options div a {
     color: #f2f2f2;
 }
@@ -182,46 +189,50 @@ html {
 }
 
 .frames li {
-    overflow: scroll;
-    width: 33.333%;
-    color: white;
-    height: 218px;
+    height: 60%;
 }
 
 /* ===========downer=========== */
 
 /* ===========footer=========== */
 
+
+
+.footer-space {
+    height: 45px;
+}
+
+
 footer {
+    min-width:100%;
+    max-width:100%;
+    height:50px;
+    background-color:#000000;
+    color:#ffffff;
+    text-align: center;
     position: fixed;
-    /*基準を画面の左上に*/
     bottom: 0;
     left: 0;
-    /*余白が入らないように*/
-    margin: 0;
-    height: 40px;
-    width: 100%;
-    z-index: 999;
 }
 
-footer ul {
-    display: flex;
-    justify-content: space-around;
-    height: 35px;
-}
-
-footer ul li {
-    /* line-height: 35px; */
-}
-
-footer ul li a {
+footer >ul {
+    display:flex;
     align-items: center;
-    height: 35px;
+    justify-content: space-evenly;
+    list-style: none;
+    height: 50px;
+    padding: 5px 10px;
 }
 
 .underBar {
-    border-bottom: solid 2px #efefef;
-    margin-bottom: 10px;
-    width: 22px;
-    text-align: center;
+    border-bottom: 2px solid #ffffff;
 }
+
+a {
+    text-decoration:none;
+}
+
+.glyphicon {
+    color:white;
+}
+
