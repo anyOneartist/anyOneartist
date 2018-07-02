@@ -23,12 +23,12 @@
  
 <body>
   <div id="container">  <!-- video の上に canvas をオーバーレイするための div 要素 -->
-    <video id="video" width="400" height="300" class="camera" autoplay="true", playsinline></video>  <!-- カメラ映像を流す video -->
-    <canvas id="canvas" width="400" height="300" calss="camera"></canvas>        <!-- 重ねて描画する canvas -->
+    <video id="video" width="400" height="300" autoplay="true", playsinline></video>  <!-- カメラ映像を流す video -->
+    <canvas id="canvas" width="400" height="300"></canvas>        <!-- 重ねて描画する canvas -->
   </div>
   <div id="dat"></div>  <!-- データ表示用 div 要素 -->
   
- <form name="form1" action="">眉上げる
+ <form name="form1" action="">口を閉じて、眉上げる
     <select id="Select1">
       <option>---</option>
       <option value="tan1.mp3">タンバリン1</option>
@@ -184,7 +184,7 @@ $("#slider6").on('change',function(){
     // console.log(width_base)
 
 
-    if((positions[34][1] - positions[22][1]) > ago_height*1.4 && (positions[57][1] - positions[60][1]) < ago_height*0.1){
+    if((positions[34][1] - positions[22][1]) > ago_height*1.47 && (positions[57][1] - positions[60][1]) < ago_height*0.1){
       drawStamp(positions, stampSurp, 14, 1.0, 0.7, 0.0);
       if(flag_piano_do == 0){
         playsound(select1);
